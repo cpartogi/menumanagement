@@ -9,7 +9,6 @@
 * Save as .env.example to .env
 * Change db user and password if you need it
 * Open file main.example.yml
-* Modify database username and password, use the same value from docker-compose.yml
 * Save as main.example.yml to main.yml
 * Run this command to generate swagger api documentation : swag init -o api/docs 
 * Run this command : make run
