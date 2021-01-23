@@ -1,0 +1,17 @@
+development:
+  dialect: postgres
+  datasource: dbname=clientname_account
+  dir: scripts/migrations/postgres
+  table: migrations
+
+production:
+  dialect: postgres
+  datasource: dbname=clientname_account
+  dir: scripts/migrations/postgres
+  table: migrations
+
+development:
+  dialect: mysql
+  datasource: dbname=location
+  dir: scripts/migrations/postgres
+  table: migrations  

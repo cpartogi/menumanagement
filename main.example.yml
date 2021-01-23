@@ -1,0 +1,9 @@
+---
+api:
+  port: 8000
+  timeout: 1000
+auth:
+  private_key: "privatekey"
+  expire: "+30m"
+database:
+  postgres: "user=root_user password=root_password dbname=clientname_boilerplate host=localhost port=5432 sslmode=disable"
