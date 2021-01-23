@@ -81,9 +81,8 @@ func (s *Store) UpdateMenu(id *int64, m *model.Menu) error {
 
 func (s *Store) DeleteMenu(id *int64) error {
 
-	query := s.Conn.Table("menus")
-	query = query.Delete("id, menu_name, menu_detail, menu_price")
-	query = query.Where("id = ?", *id)
+	var menu model.Menu
+	query := s.Conn.Where("id = ?", *id).Delete(&menu)
 
 	return query.Error
 }
