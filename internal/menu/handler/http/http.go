@@ -48,10 +48,10 @@ func NewHandler(r *httprouter.Router, as account.Service) {
 // @Accept  json
 // @Produce  json
 // @Param name query string false "search by menu name"
-// @Success 200 {object} []account.MenuData
-// @Failure 400 {string} string "error400"
-// @Failure 404 {string} string "error404"
-// @Failure 500 {string} string "error500"
+// @Success 200 {object} response.SwaggerMenuList
+// @Failure 400 {object} response.Base
+// @Failure 404 {object} response.Base
+// @Failure 500 {object} response.Base
 // @Router /v1/menus [get]
 func (ah *HTTPHandler) GetMenus(w http.ResponseWriter, r *http.Request, nex http.HandlerFunc) {
 	ctx := r.Context()
@@ -78,10 +78,10 @@ func (ah *HTTPHandler) GetMenus(w http.ResponseWriter, r *http.Request, nex http
 // @Accept  json
 // @Produce  json
 // @Param menu_id path string true "Menu ID"
-// @Success 200 {object} []account.MenuDetailData
-// @Failure 400 {string} string "error400"
-// @Failure 404 {string} string "error404"
-// @Failure 500 {string} string "error500"
+// @Success 200 {object} response.SwaggerMenuDetail
+// @Failure 400 {object} response.Base
+// @Failure 404 {object} response.Base
+// @Failure 500 {object} response.Base
 // @Router /v1/menu/{menu_id} [get]
 func (ah *HTTPHandler) GetMenuDetail(w http.ResponseWriter, r *http.Request, nex http.HandlerFunc) {
 	ctx := r.Context()
@@ -116,11 +116,11 @@ func (ah *HTTPHandler) GetMenuDetail(w http.ResponseWriter, r *http.Request, nex
 // @Accept  json
 // @Produce  json
 // @Param request body request.MenuRequest true "Request Body"
-// @Success 200 {string} string "Ok"
-// @Failure 400 {string} string "Bad Request"
-// @Failure 422 {string} string "Unprocessable Entity"
-// @Failure 500 {string} string "Internal Server Error"
-// @Failure 504 {string} string "Gateway Timeout"
+// @Success 200 {object} response.Base
+// @Failure 400 {object} response.Base
+// @Failure 422 {object} response.Base
+// @Failure 500 {object} response.Base
+// @Failure 504 {object} response.Base
 // @Router /v1/menu [POST]
 func (ah *HTTPHandler) CreateMenu(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	userId := int64(0)
@@ -158,10 +158,10 @@ func (ah *HTTPHandler) CreateMenu(w http.ResponseWriter, r *http.Request, next h
 // @Produce json
 // @Param menu_id path string true "menu id"
 // @Param request body request.MenuRequest true "Request Body"
-// @Success 200 {string} string "Ok"
-// @Failure 400 {string} string "Bad Request"
-// @Failure 500 {string} string "Internal Server Error"
-// @Failure 504 {string} string "Gateway Timeout"
+// @Success 200 {object} response.Base
+// @Failure 400 {object} response.Base
+// @Failure 500 {object} response.Base
+// @Failure 504 {object} response.Base
 // @Router /v1/menu/{menu_id} [put]
 // Register handles HTTP request to update account
 func (ah *HTTPHandler) UpdateMenu(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
@@ -219,10 +219,10 @@ func (ah *HTTPHandler) UpdateMenu(w http.ResponseWriter, r *http.Request, next h
 // @Tags Menu
 // @Produce json
 // @Param menu_id path string true "Menu Id"
-// @Success 200 {string} string "Ok"
-// @Failure 400 {string} string "Bad Request"
-// @Failure 500 {string} string "Internal Server Error"
-// @Failure 504 {string} string "Gateway Timeout"
+// @Success 200 {object} response.Base
+// @Failure 400 {object} response.Base
+// @Failure 500 {object} response.Base
+// @Failure 504 {object} response.Base
 // @Router /v1/menu/{menu_id} [delete]
 // Register handles HTTP request to delete account
 func (ah *HTTPHandler) DeleteMenu(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
