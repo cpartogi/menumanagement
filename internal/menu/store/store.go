@@ -60,7 +60,9 @@ func (s *Store) GetDetailMenu(id *int64) ([]account.MenuDetailData, error) {
 	query = query.Where("id = ?", *id)
 
 	query.Find(&result)
-	if query.RecordNotFound() {
+
+	jmlrow := query.RowsAffected
+	if jmlrow == 0 {
 		return result, account.ErrMenuNotFound
 	}
 

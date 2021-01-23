@@ -1,41 +1,7 @@
 package account
 
-import (
-	"fmt"
-)
+import "fmt"
 
 var (
-	ErrInvalidCredential          = fmt.Errorf("Invalid Credential")
-	ErrInvalidPassword            = fmt.Errorf("Invalid Password")
-	ErrInvalidEmail               = fmt.Errorf("Invalid Email")
-	ErrUserAlreadyExist           = fmt.Errorf("User Already Exist")
-	ErrRegisteringUser            = fmt.Errorf("Error Registerring User")
-	ErrUserDataNotFound           = fmt.Errorf("User Not Found")
-	ErrUserAddressDataNotFound    = fmt.Errorf("User Addrress Not Found")
-	ErrEmailAlreadyUsed           = fmt.Errorf("Email Already Exist")
-	ErrPhoneNumberAlreadyUsed     = fmt.Errorf("Phone Number Already Exist")
-	ErrVerificationTokenNotFound  = fmt.Errorf("Verification Token Not Found")
-	ErrInvalidOtpCode             = fmt.Errorf("Invalid OTP Code")
-	ErrExpiredOTPCode             = fmt.Errorf("OTP Code Expirred")
-	ErrLocationNotFound           = fmt.Errorf("Location Data Not Found")
-	ErrSamePassword               = fmt.Errorf("New Password Must Be Different")
-	ErrDiffPassword               = fmt.Errorf("Current Password Invalid")
-	ErrMaxUserAddress             = fmt.Errorf("Address Alrready in max counts")
-	ErrMissmatchUserAddress       = fmt.Errorf("Missmatch user and address")
-	ErrDeletePrimaryAddress       = fmt.Errorf("Unable to Delete Primary Address")
-	ErrAlreadySendFriendRequest   = fmt.Errorf("Already Have Friend Request for This User")
-	ErrInvalidFriendRequestType   = fmt.Errorf("Invalid Friend Request Action")
-	ErrFriendRequestDataNotFound  = fmt.Errorf("Friend Request Data Not Found")
-	ErrInvalidUserType            = fmt.Errorf("Invalid User Type To Access This Service")
-	ErrInvalidUser                = fmt.Errorf("Invalid User")
-	ErrFollowCompany              = fmt.Errorf("Only Company Can Be Followed")
-	ErrUserNotCompany             = fmt.Errorf("User Not Company")
-	ErrAlreadyFollowCompany       = fmt.Errorf("Already Follow This Company")
-	ErrExpiredResetPasswordToken  = fmt.Errorf("Reset Passwod Token Expired")
-	ErrInvalidUserStatus          = fmt.Errorf("Invalid User Status")
-	ErrUserAlreadyVerified        = fmt.Errorf("User Already Verified")
-	ErrInvalidRegister            = fmt.Errorf("This Email Is Not Registered As Company")
-	ErrEmailNotVerified           = fmt.Errorf("Email Not Verified")
-	ErrBadRequestValidateProvince = fmt.Errorf("Bad request while validating province")
-	ErrMenuNotFound               = fmt.Errorf("Menu Not Found")
+	ErrMenuNotFound = fmt.Errorf("Menu Not Found")
 )

@@ -102,7 +102,7 @@ func (ah *HTTPHandler) GetMenuDetail(w http.ResponseWriter, r *http.Request, nex
 
 	result, err := ah.service.GetMenuDetail(&id)
 	if err != nil {
-		util.ResponseJSON(w, http.StatusInternalServerError, err.Error(), nil)
+		util.ResponseJSON(w, http.StatusNotFound, err.Error(), nil)
 		return
 	}
 
@@ -195,6 +195,13 @@ func (ah *HTTPHandler) UpdateMenu(w http.ResponseWriter, r *http.Request, next h
 	// * Fill the rest automatically
 	mMenu := data.FormatMenu(&userId)
 
+	//check data exist
+	_, err = ah.service.GetMenuDetail(&id)
+	if err != nil {
+		util.ResponseJSON(w, http.StatusNotFound, err.Error(), nil)
+		return
+	}
+
 	// * All done, time to store the data
 	err = ah.service.UpdateMenu(&id, &mMenu)
 	if err != nil {
@@ -234,7 +241,14 @@ func (ah *HTTPHandler) DeleteMenu(w http.ResponseWriter, r *http.Request, next h
 		return
 	}
 
-	// * All done, time to store the data
+	// check data exist
+	_, err = ah.service.GetMenuDetail(&id)
+	if err != nil {
+		util.ResponseJSON(w, http.StatusNotFound, err.Error(), nil)
+		return
+	}
+
+	// delete data
 	err = ah.service.DeleteMenu(&id)
 	if err != nil {
 		log.Println("Failed delete menu:", err)
