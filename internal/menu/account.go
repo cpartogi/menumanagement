@@ -3,7 +3,7 @@ package account
 import (
 	"context"
 
-	"github.com/cpartogi/izyai/internal/menu/model"
+	"github.com/cpartogi/menumanagement/internal/menu/model"
 )
 
 // Account denotes user's account object

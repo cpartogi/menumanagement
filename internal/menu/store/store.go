@@ -3,8 +3,8 @@ package repository
 import (
 	"context"
 
-	account "github.com/cpartogi/izyai/internal/menu"
-	"github.com/cpartogi/izyai/internal/menu/model"
+	account "github.com/cpartogi/menumanagement/internal/menu"
+	"github.com/cpartogi/menumanagement/internal/menu/model"
 
 	"github.com/jinzhu/gorm"
 )

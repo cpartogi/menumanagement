@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"time"
 
-	account_http "github.com/cpartogi/izyai/internal/menu/handler/http"
-	account_service "github.com/cpartogi/izyai/internal/menu/service"
-	account_store "github.com/cpartogi/izyai/internal/menu/store"
-	"github.com/cpartogi/izyai/pkg/common/config"
+	account_http "github.com/cpartogi/menumanagement/internal/menu/handler/http"
+	account_service "github.com/cpartogi/menumanagement/internal/menu/service"
+	account_store "github.com/cpartogi/menumanagement/internal/menu/store"
+	"github.com/cpartogi/menumanagement/pkg/common/config"
 
-	db "github.com/cpartogi/izyai/pkg/common/lib/pgsql"
+	db "github.com/cpartogi/menumanagement/pkg/common/lib/pgsql"
 
 	"github.com/joho/godotenv"
 	"github.com/julienschmidt/httprouter"

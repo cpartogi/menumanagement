@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	account "github.com/cpartogi/izyai/internal/menu"
-	"github.com/cpartogi/izyai/internal/menu/model"
+	account "github.com/cpartogi/menumanagement/internal/menu"
+	"github.com/cpartogi/menumanagement/internal/menu/model"
 )
 
 // Store represent the Account's repository contract

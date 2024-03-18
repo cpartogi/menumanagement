@@ -4,8 +4,8 @@ import (
 	"context"
 	"log"
 
-	account "github.com/cpartogi/izyai/internal/menu"
-	"github.com/cpartogi/izyai/internal/menu/model"
+	account "github.com/cpartogi/menumanagement/internal/menu"
+	"github.com/cpartogi/menumanagement/internal/menu/model"
 )
 
 func (s *Service) GetMenus(ctx context.Context, filter map[string]string) ([]account.MenuData, error) {

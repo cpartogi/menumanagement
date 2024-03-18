@@ -9,11 +9,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cpartogi/izyai/internal/menu/constant"
+	"github.com/cpartogi/menumanagement/internal/menu/constant"
 
-	"github.com/cpartogi/izyai/pkg/common/config"
-	"github.com/cpartogi/izyai/pkg/common/state"
-	"github.com/cpartogi/izyai/pkg/common/util"
+	"github.com/cpartogi/menumanagement/pkg/common/config"
+	"github.com/cpartogi/menumanagement/pkg/common/state"
+	"github.com/cpartogi/menumanagement/pkg/common/util"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/urfave/negroni"
 )

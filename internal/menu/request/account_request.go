@@ -3,7 +3,7 @@ package request
 import (
 	"time"
 
-	"github.com/cpartogi/izyai/internal/menu/model"
+	"github.com/cpartogi/menumanagement/internal/menu/model"
 )
 
 type MenuRequest struct {

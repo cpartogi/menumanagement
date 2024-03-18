@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"strconv"
 
-	swaggerDocs "github.com/cpartogi/izyai/api/docs"
-	account "github.com/cpartogi/izyai/internal/menu"
-	"github.com/cpartogi/izyai/internal/menu/request"
-	mdl "github.com/cpartogi/izyai/pkg/common/middleware"
-	"github.com/cpartogi/izyai/pkg/common/util"
+	swaggerDocs "github.com/cpartogi/menumanagement/api/docs"
+	account "github.com/cpartogi/menumanagement/internal/menu"
+	"github.com/cpartogi/menumanagement/internal/menu/request"
+	mdl "github.com/cpartogi/menumanagement/pkg/common/middleware"
+	"github.com/cpartogi/menumanagement/pkg/common/util"
 
 	"github.com/julienschmidt/httprouter"
 	httpSwagger "github.com/swaggo/http-swagger"
